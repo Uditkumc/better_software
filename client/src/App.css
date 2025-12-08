@@ -1,0 +1,18 @@
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#f3f6fb;margin:0}
+.app{max-width:1100px;margin:20px auto;padding:18px;background:#fff;border-radius:10px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+.app-header h1{margin:0 0 10px;font-size:22px}
+.app-main{display:flex;gap:20px}
+.app-left{width:320px;padding:12px;border-right:1px solid #f1f5f9}
+.app-right{flex:1;padding:12px}
+.empty{color:#6b7280;padding:20px}
+.task-card{padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:10px;cursor:pointer;background:#fff}
+.task-card.selected{background:#eef6ff;border-color:#dbeafe}
+.task-title{font-weight:700}
+.task-desc{color:#64748b;font-size:13px}
+.comment-card{padding:12px;border-radius:10px;border:1px solid #f1f5f9;margin-bottom:10px;background:#fff}
+.comment-author{font-weight:700}
+.comment-time{color:#94a3b8;font-size:12px}
+.form-row input, .form-row textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6eef8;margin-top:8px}
+.btn{padding:8px 12px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+.btn.primary{background:#2563eb;color:#fff}
+.btn.ghost{background:transparent;border:1px solid #e6eef8}

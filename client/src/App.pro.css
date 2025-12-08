@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --accent-2:#0ea5a4;
+  --soft:#eef2ff;
+  --radius:12px;
+  --shadow: 0 8px 30px rgba(15,23,42,0.06);
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;color:#0b1220;background:var(--bg);-webkit-font-smoothing:antialiased}
+.shell{min-height:100vh;display:flex;flex-direction:column}
+.topbar{background:linear-gradient(90deg,#fff,#fbfdff);padding:18px 22px;border-bottom:1px solid #eef2f7}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;display:flex;align-items:center;justify-content:center;font-weight:700}
+.topbar h1{margin:0;font-size:18px}
+.subtitle{margin:4px 0 0;color:var(--muted);font-size:13px}
+.meta{margin-left:auto;color:var(--muted);font-size:13px}
+
+/* layout */
+.container{display:flex;gap:20px;max-width:1100px;margin:20px auto;padding:0 16px;flex:1}
+.sidebar{width:360px}
+.content{flex:1}
+
+/* sidebar card */
+.panel{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid #f1f5f9}
+.panel h3{margin:0 0 8px;font-size:16px}
+
+/* search */
+.search{
+  display:flex;gap:8px;margin-bottom:12px;
+}
+.search input{
+  flex:1;padding:10px 12px;border-radius:10px;border:1px solid #e6eef8;background:transparent;font-size:14px;
+}
+
+/* task item */
+.task-list{display:flex;flex-direction:column;gap:10px}
+.task-item{
+  display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;border:1px solid transparent;cursor:pointer;transition:all .14s;
+}
+.task-item:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(12,18,36,0.06)}
+.task-item .thumb{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#2b8af6,#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+.task-item .info{flex:1}
+.task-item .title{font-weight:700}
+.task-item .desc{color:var(--muted);font-size:13px;margin-top:6px}
+.task-item .meta{color:var(--muted);font-size:13px}
+
+/* selected */
+.task-item.selected{background:linear-gradient(90deg,var(--soft),#fbfdff);border:1px solid #dbeafe}
+
+/* content area */
+.empty{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;border:1px solid #f1f5f9}
+.view-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #f1f5f9}
+.view-header{display:flex;gap:12px;align-items:center}
+.view-header .title{font-size:20px;margin:0}
+.view-desc{color:var(--muted);margin-top:8px}
+
+/* comments */
+.comments{margin-top:14px;display:flex;flex-direction:column;gap:12px}
+.comment{display:flex;gap:12px;padding:12px;border-radius:10px;border:1px solid #f1f5f9;background:linear-gradient(180deg,#fff,#fbfdff)}
+.comment .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#06b6d4,#2563eb);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.comment .body{flex:1}
+.comment .meta{display:flex;justify-content:space-between;align-items:start}
+.comment .author{font-weight:700}
+.comment .time{color:var(--muted);font-size:12px}
+.comment .text{margin-top:8px;color:#0b1220}
+
+/* form */
+.form{margin-top:16px;padding:12px;border-radius:10px;border:1px solid #eef2f7;background:#fff}
+.form input,.form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #eef2f7;margin-top:8px}
+.form .row{display:flex;gap:8px}
+.form .actions{display:flex;gap:10px;margin-top:10px}
+
+/* buttons */
+.btn{padding:8px 12px;border-radius:10px;border:1px solid transparent;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;border:1px solid #e6eef8}
+
+/* footer */
+.footer{padding:12px;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid #f1f5f9}
+
+/* responsive */
+@media (max-width:960px){
+  .container{flex-direction:column;padding:0 12px}
+  .sidebar{width:100%}
+}
